@@ -1,0 +1,284 @@
+# Generato da scripts/gen-netlify.mjs (npm run gen:netlify)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ---- 301 dai vecchi indirizzi del sito WordPress ----
+[[redirects]]
+  from = "/terms/"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/terms"
+  status = 301
+  force = true
+  query = {page_id = "3"}
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/page-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/post-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feed"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feed/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/comments/feed/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/10/da14f7b6-2997-4f6c-95e3-6915c3030066.jpeg"
+  to = "/img/photos/da14f7b6-2997-4f6c-95e3-6915c3030066-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/10/da14f7b6-2997-4f6c-95e3-6915c3030066.jpeg.webp"
+  to = "/img/photos/da14f7b6-2997-4f6c-95e3-6915c3030066-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2023/12/669a4e24accd4b93b96e4e4986e88358_5823553535856459615_121_lg_lg.jpg"
+  to = "/img/photos/669a4e24accd4b93b96e4e4986e88358-5823553535856459615-121-lg--lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2023/12/669a4e24accd4b93b96e4e4986e88358_5823553535856459615_121_lg_lg.jpg.webp"
+  to = "/img/photos/669a4e24accd4b93b96e4e4986e88358-5823553535856459615-121-lg--lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/10/unnamed-1-scaled-e1666344965191.jpg"
+  to = "/img/photos/unnamed-1-scaled-e1666344965191-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/10/unnamed-1-scaled-e1666344965191.jpg.webp"
+  to = "/img/photos/unnamed-1-scaled-e1666344965191-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/10/unnamed-scaled.jpg"
+  to = "/img/photos/unnamed-scaled-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/10/unnamed-scaled.jpg.webp"
+  to = "/img/photos/unnamed-scaled-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/GC-Catacombs.jpg"
+  to = "/img/photos/gc-catacombs-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/GC-Catacombs.jpg.webp"
+  to = "/img/photos/gc-catacombs-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/GC-City-t.jpg"
+  to = "/img/photos/gc-city-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/GC-City-t.jpg.webp"
+  to = "/img/photos/gc-city-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3693-copy-t.jpg"
+  to = "/img/photos/img-3693-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3693-copy-t.jpg.webp"
+  to = "/img/photos/img-3693-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3681-copy-t.jpg"
+  to = "/img/photos/img-3681-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3681-copy-t.jpg.webp"
+  to = "/img/photos/img-3681-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3688-copy-t.jpg"
+  to = "/img/photos/img-3688-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/IMG_3688-copy-t.jpg.webp"
+  to = "/img/photos/img-3688-copy-t-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-26-at-9.35.02-PM.jpeg"
+  to = "/img/photos/whatsapp-image-2022-06-26-at-9-35-02-pm-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-26-at-9.35.02-PM.jpeg.webp"
+  to = "/img/photos/whatsapp-image-2022-06-26-at-9-35-02-pm-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-26-at-9.34.37-PM.jpeg"
+  to = "/img/photos/whatsapp-image-2022-06-26-at-9-34-37-pm-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-26-at-9.34.37-PM.jpeg.webp"
+  to = "/img/photos/whatsapp-image-2022-06-26-at-9-34-37-pm-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/03/b2.jpg"
+  to = "/img/photos/b2-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/03/b2.jpg.webp"
+  to = "/img/photos/b2-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/03/72334955_134541127920035_8028238653065003008_n.jpg"
+  to = "/img/photos/72334955-134541127920035-8028238653065003008-n-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2022/03/72334955_134541127920035_8028238653065003008_n.jpg.webp"
+  to = "/img/photos/72334955-134541127920035-8028238653065003008-n-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2020/10/golfcart-tours.jpeg"
+  to = "/img/photos/golfcart-tours-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2020/10/golfcart-tours.jpeg.webp"
+  to = "/img/photos/golfcart-tours-lg.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2021/05/Wheel.Tours-logo-site-700px-t.png"
+  to = "/brand/wordmark-dark.svg"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-content/uploads/2021/05/Wheel.tours-logo-text-1080px-t.png"
+  to = "/brand/emblem.svg"
+  status = 301
+  force = true
+
+# ---- pagine del sito (single page app, EN e /it) ----
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

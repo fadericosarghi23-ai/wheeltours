@@ -1,0 +1,36 @@
+{
+  "width": 1200,
+  "height": 1099,
+  "pin": {
+    "x": 63.72,
+    "y": 38.35
+  },
+  "landmarks": [
+    {
+      "name": "Basilica di Santa Maria Maggiore",
+      "x": 76.96,
+      "y": 32.27
+    },
+    {
+      "name": "Basilica di San Pietro in Vincoli",
+      "x": 54.28,
+      "y": 57.04
+    },
+    {
+      "name": "Colosseo",
+      "x": 48.64,
+      "y": 82
+    },
+    {
+      "name": "Fori Imperiali",
+      "x": 24.09,
+      "y": 60
+    },
+    {
+      "name": "Metro Cavour",
+      "x": 54.09,
+      "y": 53.33
+    }
+  ],
+  "attribution": "© OpenStreetMap contributors"
+}

@@ -1,0 +1,251 @@
+/* solo il set latino (copre anche le lettere accentate dell'italiano): RocknRoll One ha decine di set giapponesi */
+/* titoli: Montserrat, già caricato dal sito attuale (CSS Elementor); testi: Roboto, come l'originale */
+@import '@fontsource/montserrat/latin-600.css';
+@import '@fontsource/montserrat/latin-700.css';
+@import '@fontsource/montserrat/latin-800.css';
+@import '@fontsource/roboto/latin-400.css';
+@import '@fontsource/roboto/latin-500.css';
+@import '@fontsource/roboto/latin-600.css';
+@import '@fontsource/roboto/latin-700.css';
+@import 'tailwindcss' source('.');
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   Token Wheel Tours, estratti dal CSS reale del sito attuale
+   (Elementor kit: --e-global-color-*) e dai PNG del logo.
+   ============================================================ */
+:root {
+  /* identità */
+  --wt-night: #1b252f; /* sfondo sezioni (e-global-color-aac377a) */
+  --wt-cyan: #00b8f2; /* titoli, link, bottoni (e-global-color-3078df2) */
+  --wt-logo-cyan: #00aeef; /* cyan della biga nel logo */
+  --wt-logo-navy: #003355; /* contorni e scritta del logo */
+  --wt-yellow: #ffdf00; /* barra promo (e-global-color-69ef473) */
+  --wt-sky: #6ec1e4; /* velatura sezione "welcome to Rome" (e-global-color-primary) */
+  --wt-mist: #ccd6df; /* testo chiaro su fondo scuro */
+  --wt-grey: #54595f; /* e-global-color-secondary */
+  --wt-whatsapp: #25d366; /* e-global-color-5725332 */
+  --wt-white: #ffffff; /* sfondo body del sito attuale (e-global-color-98de289) */
+  --wt-text: #7a7a7a; /* testo (e-global-color-text) */
+  --wt-black: #000000;
+  /* profondità ricavate dal blu notte (non nuovi colori di marca) */
+  --wt-night-deep: color-mix(in oklab, var(--wt-night) 78%, black);
+  --wt-night-soft: color-mix(in oklab, var(--wt-night) 88%, white);
+  /* superfici chiare per le sezioni di vendita (bianco del body + grigio chiaro del sito) */
+  --wt-paper: var(--wt-white);
+  --wt-paper-2: color-mix(in oklab, var(--wt-mist) 28%, white);
+  --wt-line: color-mix(in oklab, var(--wt-mist) 70%, white);
+
+  /* shadcn */
+  --radius: 0.5rem;
+  --background: var(--wt-night);
+  --foreground: var(--wt-white);
+  --card: var(--wt-night-soft);
+  --card-foreground: var(--wt-white);
+  --popover: var(--wt-night-deep);
+  --popover-foreground: var(--wt-white);
+  --primary: var(--wt-cyan);
+  --primary-foreground: var(--wt-white);
+  --secondary: var(--wt-yellow);
+  --secondary-foreground: var(--wt-night);
+  --muted: var(--wt-night-soft);
+  --muted-foreground: var(--wt-mist);
+  --accent: var(--wt-yellow);
+  --accent-foreground: var(--wt-night);
+  --destructive: #e5484d;
+  --border: color-mix(in oklab, var(--wt-mist) 18%, transparent);
+  --input: color-mix(in oklab, var(--wt-mist) 28%, transparent);
+  --ring: var(--wt-yellow);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-night: var(--wt-night);
+  --color-night-deep: var(--wt-night-deep);
+  --color-night-soft: var(--wt-night-soft);
+  --color-cyan: var(--wt-cyan);
+  --color-logo-cyan: var(--wt-logo-cyan);
+  --color-logo-navy: var(--wt-logo-navy);
+  --color-yellow: var(--wt-yellow);
+  --color-sky: var(--wt-sky);
+  --color-mist: var(--wt-mist);
+  --color-grey: var(--wt-grey);
+  --color-whatsapp: var(--wt-whatsapp);
+  --color-ink: var(--wt-night);
+  --color-paper: var(--wt-paper);
+  --color-paper-2: var(--wt-paper-2);
+  --color-line: var(--wt-line);
+  --color-body: var(--wt-grey);
+
+  --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-promo: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-roll: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --animate-marquee: marquee 28s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: auto;
+    background: var(--wt-night);
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    background: var(--wt-yellow);
+    color: var(--wt-night);
+  }
+  :focus-visible {
+    outline: 2px solid var(--wt-yellow);
+    outline-offset: 3px;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  /* Montserrat è caricato solo nei pesi forti: chi usa la classe font-display ha sempre il peso giusto */
+  .font-display {
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+  .font-promo {
+    font-weight: 700;
+  }
+  /* titolo del sito attuale: maiuscolo, ombra morbida */
+  .title-shadow {
+    text-shadow: 1px 1px 10px rgb(0 0 0 / 0.3);
+  }
+  /* contenitore a tutta larghezza (hero e navbar): margine laterale fluido */
+  .container-full {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .container-full {
+      padding-inline: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-full {
+      padding-inline: 4vw;
+    }
+  }
+  .container-wt {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .container-wt {
+      padding-inline: 2rem;
+    }
+  }
+  /* sampietrini: trama dei sanpietrini romani, usata come suolo e come texture */
+  .cobbles {
+    background-color: var(--wt-night-deep);
+    background-image:
+      radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--wt-mist) 10%, transparent) 0 38%, transparent 40%),
+      radial-gradient(circle at 0 0, color-mix(in oklab, var(--wt-mist) 8%, transparent) 0 38%, transparent 40%);
+    background-size: 28px 28px;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+    transition: background-size 0.45s var(--ease-out-expo);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 2px;
+  }
+  .prose-wt p + p {
+    margin-top: 1rem;
+  }
+  .prose-wt h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+    color: var(--wt-night);
+  }
+  .prose-wt ul {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+  .prose-wt li + li {
+    margin-top: 0.4rem;
+  }
+  .prose-wt a {
+    color: var(--wt-cyan);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
