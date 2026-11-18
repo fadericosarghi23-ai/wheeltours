@@ -19,3 +19,8 @@ framer-motion, GSAP + Lenis, three / react-three-fiber (solo hero, chunk separat
 
 ## Servizi esterni
 Bokun e Google Maps si caricano solo dopo un clic del visitatore. Nessun cookie proprio, nessun analytics.
+
+## Presentazione cliente (PDF Altalogik)
+`scripts/gen-presentazione.mjs` genera l'HTML delle 5 pagine (struttura del toolkit `_altalogik-pdf`,
+identità del sito). Servono il logo Altalogik e una cartella di screenshot del sito (hero, tours, tour,
+route, daynight, visit a 1440px). Poi Chrome headless `--print-to-pdf`.
